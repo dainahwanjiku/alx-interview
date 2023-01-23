@@ -1,11 +1,11 @@
 #!/usr/bin/python3
 
-""" script that reads stdin line by line and computes metrics """
+""" reads stdin line by line and computes metrics """
 
 import sys
 
 
-def printStatus(dic, size):
+def status(dic, size):
     """ Prints information """
     print("File size: {:d}".format(size))
     for i in sorted(dic.keys()):
@@ -23,7 +23,7 @@ size = 0
 try:
     for line in sys.stdin:
         if count != 0 and count % 10 == 0:
-            printStatus(statusCodes, size)
+            status(statusCodes, size)
 
         stlist = line.split()
         count += 1
@@ -38,9 +38,9 @@ try:
                 statusCodes[stlist[-2]] += 1
         except Exception:
             pass
-    printStatus(statusCodes, size)
+    status(statusCodes, size)
 
 
 except KeyboardInterrupt:
-    printStatus(statusCodes, size)
+    status(statusCodes, size)
     raise
