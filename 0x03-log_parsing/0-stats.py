@@ -1,5 +1,4 @@
 #!/usr/bin/python3
-
 """
 a script that reads stdin line by line and computes metrics
 """
@@ -13,6 +12,7 @@ def printStatus(dic, size):
     for i in sorted(dic.keys()):
         if dic[i] != 0:
             print("{}: {:d}".format(i, dic[i]))
+
 
 # this is my comment
 statusCodes = {"200": 0, "301": 0, "400": 0, "401": 0, "403": 0,
