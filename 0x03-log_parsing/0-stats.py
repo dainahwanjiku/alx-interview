@@ -1,7 +1,6 @@
 #!/usr/bin/python3
-"""
-a script that reads stdin line by line and computes metrics
-"""
+
+""" script that reads stdin line by line and computes metrics """
 
 import sys
 
@@ -14,7 +13,7 @@ def printStatus(dic, size):
             print("{}: {:d}".format(i, dic[i]))
 
 
-# this is my comment
+# sourcery skip: use-contextlib-suppress
 statusCodes = {"200": 0, "301": 0, "400": 0, "401": 0, "403": 0,
                "404": 0, "405": 0, "500": 0}
 
